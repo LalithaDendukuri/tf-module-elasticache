@@ -16,7 +16,7 @@ resource "aws_security_group" "main" {
   vpc_id      = var.vpc_id
   tags        = merge(local.tags, { Name ="${local.name_prefix}-sg" })
   ingress {
-    description = "ELASTIC"
+    description = "ELASTICACHE"
     from_port   = var.port
     to_port     = var.port
     protocol    = "tcp"
